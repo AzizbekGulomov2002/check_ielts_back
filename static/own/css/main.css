@@ -1,0 +1,192 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.IELTS{
+    padding: 20px;
+
+}
+
+.IELTS .logo-box img{
+    width: 100px;
+}
+
+
+.IELTS .card-top{
+    border-bottom: 2px solid black;
+    padding: 15px 0;
+}
+
+.IELTS .card-top .top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.IELTS .card-top .top .general-training{
+    border: 2px solid black;
+    padding: 5px 50px;
+}
+
+.IELTS .card-top .center .note-text{
+    font-style: italic;
+}
+
+.IELTS .card-top .bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.IELTS .card-top .bottom .my-text-box{
+    display: flex;
+    align-items: center;
+}
+
+.IELTS .card-top .bottom .my-text-box .text{
+    margin-right: 20px;
+}
+
+.IELTS .card-top .bottom .my-text-box .box{
+    width: 130px;
+    border: 2px solid black;
+    height: 50px;
+}
+
+
+
+
+.IELTS .cadidate-details{
+    padding: 15px 0;
+}
+
+.IELTS .cadidate-details .top-info{
+    border-bottom: 2px solid black;
+    padding-bottom: 15px;
+}
+
+.IELTS .cadidate-details .bottom-info{
+    border-bottom: 2px solid black;
+    padding: 10px 0;
+}
+
+.IELTS .cadidate-details .info-box .info .text{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.IELTS .cadidate-details .info-box .info .box{
+    width: 100%;
+    border: 2px solid black;
+    height: 50px;
+    align-items: center;
+    display: flex;
+    padding-left: 10px;
+    background-color: #e5e5e5;
+}
+
+.IELTS .cadidate-details .avatar-box{
+    height: 100%;
+    border: 2px solid black;
+}
+
+.IELTS .test-result{
+    padding: 15px 0;
+    border-bottom: 2px solid black;
+}
+
+.IELTS .test-result .results-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.IELTS .test-result .result{
+    display: flex;
+    align-items: center;
+}
+
+.IELTS .test-result .result .text{
+    margin-right: 10px;
+}
+
+.IELTS .test-result .result .box{
+    border: 2px solid black;
+    width: 50px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e5e5e5;
+}
+
+.IELTS .administrator-comments{
+    padding: 15px 0;
+    border-bottom: 2px solid black;
+}
+
+.IELTS .administrator-comments .comment-box{
+    width: 100%;
+    border: 2px solid black;
+    height: 135px;
+}
+
+.IELTS .administrator-comments .logo-box{
+    border: 2px solid black;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+
+.IELTS .administrator-comments .imzo {
+    width: 100%;
+    border-bottom: 2px solid black;
+    margin-top: 55px;
+}
+
+
+.IELTS .administrator-comments .date-box {
+    width: 100%;
+    border: 2px solid black;
+    height: 50px;
+    align-items: center;
+    display: flex;
+    padding-left: 10px;
+}
+
+.IELTS .administrator-comments .report-box {
+    width: 100%;
+    border: 2px solid black;
+    height: 50px;
+    align-items: center;
+    display: flex;
+    padding-left: 10px;
+    background-color: #e5e5e5;
+}
+
+.IELTS .footer .logo-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.IELTS .footer .logo-box img{
+    width: 180px;
+}
+
+.IELTS .footer .logo-box img:nth-child(2){
+    margin: 0 30px;
+}
+
+
+
+
+
+

@@ -1,0 +1,350 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CHECKIELTS</title>
+    <link rel="stylesheet" href="{% static 'own/test.css' %}">
+    <link rel="stylesheet" href="{% static 'own/css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'own/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'own/css/main.css' %}">
+</head>
+
+<body>
+
+{% block content %}
+
+<div class="IELTS">
+{% for i in ielts %}
+    {% comment %} <div class="logo-box">
+        <img src="images/bepro.jpg" alt="">
+        <img height="100" src="images/checkielts_1.jpg" alt="">
+    </div> {% endcomment %}
+
+    <div class="card-top">
+
+        <div class="top my-1">
+            <h2 class="head-text font-weight-bold">Test Report Form</h2>
+            <h4 class="general-training d-flex align-items-center justify-content-center">GENERAL TRAINING</h4>
+        </div>
+
+        <div class="center my-1">
+            <div class="row">
+                <div class="col-1">
+                    <h3 class="note">NOTE</h3>
+                </div>
+                <div class="col-11">
+                    <h5 class="note-text">
+                        This certificate
+                    </h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom my-1">
+            <div class="my-text-box">
+                <h3 class="text">Center Number</h3>
+                <h3 class="box"></h3>
+            </div>
+
+            <div class="my-text-box">
+                <h3 class="text">Date</h3>
+                <h4 style="font-size:20px" class="box">{{ i.date }}</h4>
+            </div>
+
+            <div class="my-text-box">
+                <h3 class="text">Candidate Number</h3>
+                <h3 class="box">{{ i.candidate_number }}</h3>
+            </div>
+
+        </div>
+
+    </div>
+    
+    <div class="cadidate-details">
+
+        <div class="top-info">
+            <div class="info-box">
+                <div class="row">
+                    <div class="col-9">
+
+                        <h3 class="head-text font-weight-bold my-1 mb-3">Candidate Details</h3>
+
+                        <div class="info-box my-1">
+                            <div class="info">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <h4 class="text">Family Name</h4>
+                                    </div>
+                                    <div class="col-9">
+                                        <h4 class="box">{{ i.family_name }}</h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="info my-1">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <h4 class="text">First Name</h4>
+                                    </div>
+                                    <div class="col-9">
+                                        <h4 class="box">{{ i.first_name }}</h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="info my-1">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <h4 class="text">Candidate ID</h4>
+                                    </div>
+                                    <div class="col-9">
+                                        <h4 class="box w-50">{{ i.candidate_id }}</h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-3">
+                        <div class="avatar-box">
+                            <img src="{{ i.image.url }}" alt="" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom-info">
+            <div class="info-box">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="info-box my-1">
+
+                            <div class="info">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <h4 class="text">Date of Birth</h4>
+                                    </div>
+                                    <div class="col-9">
+                                        <div class="d-flex align-items-center justify-content-between">
+
+                                            <div class="small-info">
+                                                <h4 style="width: 200px" class="box d-flex align-items-center justify-content-center">{{ i.date_of_birth }}</h4>
+                                            </div>
+
+                                            <div class="small-info d-flex align-items-center">
+                                                <h4 class="text">Sex (M/F)</h4>
+                                                <h4 class="ml-1 box d-flex align-items-center justify-content-center">{{ i.sex }}</h4>
+                                            </div>
+
+                                            <div class="small-info d-flex align-items-center">
+                                                <h4 class="text">Scheme Code</h4>
+                                                <h4 class="ml-1 box d-flex align-items-center justify-content-center">Private Candidate</h4>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="info">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <h4 class="text">Country or Region of Origin</h4>
+                                    </div>
+                                    <div class="col-9">
+                                        <h4 class="box">{{ i.region_address }}</h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="info my-1">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <h4 class="text">Country of Nationality</h4>
+                                    </div>
+                                    <div class="col-9">
+                                        <h4 class="box">{{ i.nationally }}</h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="info my-1">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <h4 class="text">First Language</h4>
+                                    </div>
+                                    <div class="col-9">
+                                        <h4 class="box">{{ i.first_language }}</h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="test-result">
+
+        <h3 class="head-text font-weight-bold">Test Result</h3>
+
+        <div class="results-box">
+
+            <div class="result">
+                <h4 class="text">
+                    Listening
+                </h4>
+                <h4 class="box">
+                    {{ i.listening }}
+                </h4>
+            </div>
+
+            <div class="result">
+                <h4 class="text">
+                    Reading
+                </h4>
+                <h4 class="box">
+                    {{ i.reading }}
+                </h4>
+            </div>
+
+            <div class="result">
+                <h4 class="text">
+                    Writing
+                </h4>
+                <h4 class="box">
+                    {{ i.writing }}
+                </h4>
+            </div>
+
+            <div class="result">
+                <h4 class="text">
+                    Speaking
+                </h4>
+                <h4 class="box">
+                    {{ i.speaking }}
+                </h4>
+            </div>
+
+            <div class="result">
+                <h4 class="text">
+                   Overal <br> Band <br> Score
+                </h4>
+                <h4 class="box">
+                    {{ i.overal }}
+                </h4>
+            </div>
+
+            <div class="result">
+                <h4 class="text">
+                    CEFR <br> Level
+                </h4>
+                <h4 class="box">
+                    {{ i.cefr_level }}
+                </h4>
+            </div>
+
+        </div>
+    </div>
+    
+    
+    <div class="administrator-comments">
+        <div class="row">
+            <div class="col-7">
+                <h4 class="head-text">Administrator Comments</h4>
+                <div class="comment-box">{{ i.admission_comments }}
+                </div>
+            </div>
+
+            <div class="col-5">
+                <div class="row h-100">
+                    <div class="col-6">
+                        <div class="logo-box">
+                            {% comment %} <h5 class="text">Centre stamp</h5> {% endcomment %}
+                            <img style="border-radius: 50%;" src="./../../../static/own/images/bepro.jpg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="col-6">
+                        <div class="logo-box">
+                            {% comment %} <h5 class="text">Validation stamp</h5> {% endcomment %}
+                            <img style="border-radius: 50%;" src="./../../../static/own/images/checkielts_1.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-7">
+                <div class="row">
+                    <div class=" offset-8 col-4">
+                        <h4 class="text">Administrator's <br> Signature</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-5">
+                <div class="imzo"></div>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-7">
+                <div class="row">
+                    <div class="col-2 offset-6">
+                        <h4 class="text h-100 d-flex align-items-center">Date</h4>
+                    </div>
+                    <div class="col-4">
+                        <h4 style="font-size: 20px;text-align: center;" class="date-box d-flex align-items-center justify-content-center">{{ i.date }}</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-5">
+                <div class="row">
+                    <div class="col-5">
+                        <h4 class="text">Test Report From Number</h4>
+                    </div>
+                    <div class="col-7">
+                        <h4 class="report-box">
+                            {{ i.test_number }}
+                        </h4> 
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    {% comment %} <div class="footer mt-3">
+        <div class="logo-box">
+            <img height="150" src="images/bepro.jpg" alt="">
+            <img height="150" src="images/checkielts_1.jpg" alt="">
+            <img src="images/cambridge%20asisment.png" alt="">
+        </div>
+    </div> {% endcomment %}
+
+
+</div>
+
+{% endfor %}
+
+<script src="{% static 'own/js/main.js' %}"></script>
+<script src="{% static 'own/js/bootstrap.js' %}"></script>
+<script src="{% static 'own/js/src/popover.js' %}"></script>
+<script src="{% static 'own/js/jquery.js' %}"></script>
+{% endblock content %}
+
+</body>
+</html>
