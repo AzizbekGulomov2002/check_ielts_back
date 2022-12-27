@@ -22,7 +22,7 @@ class IELTS(models.Model):
     grammar = models.FloatField(null=True, blank=True)
     pronunciation = models.FloatField(null=True, blank=True)
     fluency = models.FloatField(null=True, blank=True)
-    coherence = models.FloatField(null=True, blank=True)
+    lexical = models.FloatField(null=True, blank=True)
     # overal = models.FloatField()
     # cefr_level = models.CharField(max_length=100)
     admission_comments = models.TextField(null=True, blank=True)
@@ -31,7 +31,7 @@ class IELTS(models.Model):
 
     @property
     def overal(self):
-        return round(self.grammar + self.pronunciation + self.fluency + self.coherence)/4
+        return round(self.grammar + self.pronunciation + self.fluency + self.lexical)/4
 
     @property
     def cefr_level(self):
