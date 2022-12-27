@@ -8,7 +8,7 @@ sex = [
 
 
 class IELTS(models.Model):
-    image = models.ImageField(upload_to='{{ i.image.url }}', null=True, blank=True)
+    image = models.ImageField(upload_to='image_candidat', null=True, blank=True)
     candidate_id = models.CharField(max_length=9)
     date = models.DateField()
     family_name = models.CharField(max_length=200)
