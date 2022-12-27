@@ -19,10 +19,10 @@ class IELTS(models.Model):
     region_address = models.CharField(max_length=200)
     nationally = models.CharField(max_length=100)
     first_language = models.CharField(max_length=100)
-    listening = models.FloatField(null=True, blank=True)
-    writing = models.FloatField(null=True, blank=True)
-    reading = models.FloatField(null=True, blank=True)
-    speaking = models.FloatField(null=True, blank=True)
+    grammar = models.FloatField(null=True, blank=True)
+    pronunciation = models.FloatField(null=True, blank=True)
+    fluency = models.FloatField(null=True, blank=True)
+    coherence = models.FloatField(null=True, blank=True)
     # overal = models.FloatField()
     # cefr_level = models.CharField(max_length=100)
     admission_comments = models.TextField(null=True, blank=True)
@@ -31,10 +31,11 @@ class IELTS(models.Model):
 
     @property
     def overal(self):
-        return round(self.writing + self.reading + self.listening + self.speaking)/4
+        return round(self.grammar + self.pronunciation + self.fluency + self.coherence)/4
 
     @property
     def cefr_level(self):
+       
         if (4.00) <= self.overal <= (5.00):
             return "B1"
         if (5.5) <= self.overal <= (6.5):

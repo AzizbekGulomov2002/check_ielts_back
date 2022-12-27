@@ -37,7 +37,7 @@
                 </div>
                 <div class="col-11">
                     <h5 class="note-text">
-                        This certificate
+                        {% comment %} This certificate is  {% endcomment %}
                     </h5>
                 </div>
             </div>
@@ -51,7 +51,7 @@
 
             <div class="my-text-box">
                 <h3 class="text">Date</h3>
-                <h4 style="font-size:20px" class="box">{{ i.date }}</h4>
+                <h4 style="font-size:20px; height: 40px;" class="box">{{ i.date }}</h4>
             </div>
 
             <div class="my-text-box">
@@ -202,37 +202,37 @@
 
             <div class="result">
                 <h4 class="text">
-                    Listening
+                    Grammar
                 </h4>
                 <h4 class="box">
-                    {{ i.listening }}
+                    {{ i.grammar }}
                 </h4>
             </div>
 
             <div class="result">
                 <h4 class="text">
-                    Reading
+                    Pronunciation
                 </h4>
                 <h4 class="box">
-                    {{ i.reading }}
+                    {{ i.pronunciation }}
                 </h4>
             </div>
 
             <div class="result">
                 <h4 class="text">
-                    Writing
+                    Fluency
                 </h4>
                 <h4 class="box">
-                    {{ i.writing }}
+                    {{ i.fluency }}
                 </h4>
             </div>
 
             <div class="result">
                 <h4 class="text">
-                    Speaking
+                    Coherence
                 </h4>
                 <h4 class="box">
-                    {{ i.speaking }}
+                    {{ i.coherence }}
                 </h4>
             </div>
 
@@ -278,7 +278,7 @@
                     <div class="col-6">
                         <div class="logo-box">
                             {% comment %} <h5 class="text">Validation stamp</h5> {% endcomment %}
-                            <img style="border-radius: 50%;" src="./../../../static/own/images/checkielts_1.jpg" alt="">
+                            <img style="height: 80%;width: 90%;" src="./../../../static/images/big_ielts.jpg" alt="">
                         </div>
                     </div>
                 </div>
@@ -302,7 +302,7 @@
             <div class="col-7">
                 <div class="row">
                     <div class="col-2 offset-6">
-                        <h4 class="text h-100 d-flex align-items-center">Date</h4>
+                        <h4 class="text h-90 d-flex align-items-center">Date</h4>
                     </div>
                     <div class="col-4">
                         <h4 style="font-size: 20px;text-align: center;" class="date-box d-flex align-items-center justify-content-center">{{ i.date }}</h4>
