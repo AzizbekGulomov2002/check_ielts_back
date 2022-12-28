@@ -1,6 +1,6 @@
 from django.db import models
 from asyncio import format_helpers
-
+import math 
 sex = [
     ('F','Female'),
     ('M','Male'),
@@ -31,21 +31,29 @@ class IELTS(models.Model):
 
     @property
     def overal(self):
-        return round(self.grammar + self.pronunciation + self.fluency + self.lexical)/4
+        arifmethic_mean = (self.grammar + self.pronunciation + self.fluency + self.lexical) / 4
+        if arifmethic_mean != int(arifmethic_mean):
+            floor_plus_half = int(arifmethic_mean) + 0.5
+            if (arifmethic_mean) <= floor_plus_half:
+                return floor_plus_half
+            else:
+                return math.ceil(arifmethic_mean)
+        else:
+            return arifmethic_mean
+
+
+  
 
     @property
     def cefr_level(self):
-       
-        if (4.00) <= self.overal <= (5.00):
+        if 4 <= (self.overal) <= 5:
             return "B1"
-        if (5.5) <= self.overal <= (6.5):
+        if 5.5 <= (self.overal) <= 6.5:
             return "B2"
-        if (7.00) <= self.overal <= (8.00):
+        if 7 <= (self.overal) <= 8:
             return "C1"
-        if (8.00) <= self.overal <= (9.00): 
+        if 8 <= (self.overal) <= 9: 
             return "C2"
-        else:
-            return "No"
 
 
     @property
