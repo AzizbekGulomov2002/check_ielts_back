@@ -19,19 +19,20 @@ class IELTS(models.Model):
     region_address = models.CharField(max_length=200)
     nationally = models.CharField(max_length=100)
     first_language = models.CharField(max_length=100)
-    grammar = models.FloatField(null=True, blank=True)
-    pronunciation = models.FloatField(null=True, blank=True)
-    fluency = models.FloatField(null=True, blank=True)
-    lexical = models.FloatField(null=True, blank=True)
-    # overal = models.FloatField()
-    # cefr_level = models.CharField(max_length=100)
+    
+    listening = models.FloatField(null=True, blank=True)
+    speaking = models.FloatField(null=True, blank=True)
+    reading = models.FloatField(null=True, blank=True)
+    writing = models.FloatField(null=True, blank=True)
+    
+    
     admission_comments = models.TextField(null=True, blank=True)
     test_number = models.IntegerField()
     candidate_number = models.IntegerField(null=True, blank=True, unique=True)
 
     @property
     def overal(self):
-        arifmethic_mean = (self.grammar + self.pronunciation + self.fluency + self.lexical) / 4
+        arifmethic_mean = (self.listening + self.speaking + self.reading + self.writing) / 4
         if arifmethic_mean != int(arifmethic_mean):
             floor_plus_half = int(arifmethic_mean) + 0.5
             if (arifmethic_mean) <= floor_plus_half:
