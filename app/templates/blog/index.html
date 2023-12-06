@@ -112,7 +112,11 @@
 
                     <div class="col-3">
                         <div class="avatar-box">
-                            <img src="{{ i.image.url }}" alt="" class="img-fluid">
+                            {% if i.image %}
+                                <img src="{{ i.image.url }}" alt="" class="img-fluid">
+                            {% else %}
+                                <p>No image available</p>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
